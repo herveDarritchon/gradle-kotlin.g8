@@ -1,8 +1,9 @@
 buildscript {
-    ext.kotlinVersion = '1.2.50'
+    ext.kotlinVersion = '1.2.70'
     ext.junitVersion = "5.0.0"
     ext.junitPlatformVersion = "1.0.0"
     ext.spekVersion = "1.1.5"
+    ext.http4kVersion = "3.38.1"
 
     repositories {
         mavenCentral()
@@ -29,6 +30,10 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:\$kotlinVersion"
     compile "org.jetbrains.kotlin:kotlin-reflect:\$kotlinVersion"
 
+    compile group: "org.http4k", name: "http4k-core", version: "\$http4kVersion"
+    compile group: "org.http4k", name: "http4k-server-jetty", version: "\$http4kVersion"
+    compile group: "org.http4k", name: "http4k-client-okhttp", version: "\$http4kVersion"
+
     testCompile "org.junit.jupiter:junit-jupiter-api:\$junitVersion"
     testCompile "org.junit.jupiter:junit-jupiter-params:\$junitVersion"
 
@@ -37,6 +42,7 @@ dependencies {
 
     runtime "org.junit.jupiter:junit-jupiter-engine:\$junitVersion"
     runtime "org.junit.platform:junit-platform-console:\$junitPlatformVersion"
+
 }
 
 apply from: "junit5.gradle"
