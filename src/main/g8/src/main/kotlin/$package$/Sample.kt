@@ -1,5 +1,15 @@
 package $package$
 
+import org.http4k.client.OkHttp
+import org.http4k.core.*
+import org.http4k.core.Status.Companion.OK
+import org.http4k.filter.CachingFilters
+import org.http4k.routing.bind
+import org.http4k.routing.path
+import org.http4k.routing.routes
+import org.http4k.server.Jetty
+import org.http4k.server.asServer
+
 /**
  * Created by Hervé Darritchon on 18/06/2018.
  *
