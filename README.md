@@ -1,4 +1,19 @@
-A [Giter8][g8] template for ...!
+A [Giter8][g8] template for Kotlin !
+
+Dependcies used
+---------------
+````
+    kotlin
+    junit
+    spek
+    http4k
+````
+
+How to use it
+-------------
+Command line to run it
+
+````g8 herveDarritchon/gradle-kotlin.g8````
 
 Template license
 ----------------
